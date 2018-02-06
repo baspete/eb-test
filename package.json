@@ -1,10 +1,17 @@
 {
-  "name": "eb-test-4",
-  "version": "1.0.0",
-  "main": "app.js",
-  "license": "MIT",
-  "dependencies": {
-    "express": "^4.16.2",
-    "serve-static": "^1.13.1"
-  }
+	"name": "eb-test",
+	"version": "1.0.0",
+	"main": "app.js",
+	"dependencies": {
+		"express": "^4.16.2",
+		"serve-static": "^1.13.1"
+	},
+	"devDependencies": {
+		"concurrently": "^3.5.1"
+	},
+	"scripts": {
+		"start": "concurrently \"npm run server\" \"npm run client\"",
+		"server": "node app.js",
+		"client": "node start-client.js"
+	}
 }

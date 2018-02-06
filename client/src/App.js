@@ -4,6 +4,10 @@ import './App.css';
 
 class App extends Component {
   render() {
+    console.log('render!');
+    fetch('api/hello', results => {
+      console.log('results', results);
+    });
     return (
       <div className="App">
         <header className="App-header">

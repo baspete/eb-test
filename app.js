@@ -4,6 +4,8 @@ const express = require('express'),
 
 const app = express();
 
+app.set('port', process.env.PORT || 3001);
+
 // ========================================================================
 // STATIC ASSETS
 // serveStatic() here will cache these static assets in memory so we don't
@@ -12,6 +14,15 @@ const app = express();
 app.use('/', serveStatic('client/build'));
 
 // ========================================================================
+// API PROXY
+app.get('/api/hello', (req, res) => {
+	res.json({
+		message: 'Hello From Express'
+	});
+});
+
+// ========================================================================
 // START THE SERVER
-const port = process.env.PORT || 3000;
-app.listen(port);
+app.listen(app.get('port'), () => {
+	console.log(`Find the server at: http://localhost:${app.get('port')}/`);
+});
