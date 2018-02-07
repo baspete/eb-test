@@ -15,7 +15,7 @@ class App extends Component {
         });
       })
       .catch(function(err) {
-        console.log('Fetch Error :-S', err);
+        // console.log('Fetch Error :-S', err);
       });
   };
 
