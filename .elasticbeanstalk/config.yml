@@ -3,7 +3,7 @@ branch-defaults:
     environment: eb-test-env-prod
     group_suffix: null
   develop:
-    environment: null
+    environment: eb-test-env-dev
     group_suffix: null
   master:
     environment: eb-test-env-prod
