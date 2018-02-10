@@ -1,18 +1,18 @@
 branch-defaults:
   default:
-    environment: eb-simple-test-prod
+    environment: eb-test-app-prod
     group_suffix: null
   develop:
-    environment: eb-simple-test-dev
+    environment: eb-test-app-dev
     group_suffix: null
   master:
-    environment: eb-simple-test-prod
+    environment: eb-test-app-prod
 environment-defaults:
   eb-test-4-dev:
     branch: null
     repository: null
 global:
-  application_name: eb-simple-test
+  application_name: eb-test-app
   branch: null
   default_ec2_keyname: null
   default_platform: node.js
